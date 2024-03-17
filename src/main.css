@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .movie-card:hover img {
+    @apply opacity-50 transition-opacity duration-300;
+  }
+
+  input,
+  button {
+    @apply rounded-md outline-2 outline-offset-2 outline-blue-600 focus:outline;
+  }
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #2563eb;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+a.active {
+  @apply text-blue-600 transition-colors duration-300;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
