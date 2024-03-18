@@ -24,13 +24,13 @@ function Card({ movieTv }) {
         <img
           src={`https://image.tmdb.org/t/p/w500${poster_path}`}
           alt={movieTv.title}
-          className="h-[300px] w-[250px] rounded-md md:h-[321px] xl:h-[358px]"
+          className="h-[240px] w-[250px] rounded-md md:h-[321px] xl:h-[358px]"
         />
       ) : (
         <img
           src="../../EmptyPoster.png"
           alt={movieTv.title}
-          className="h-[300px] w-[250px] rounded-md md:h-[321px] xl:h-[358px]"
+          className="h-[240px] w-[250px] rounded-md md:h-[321px] xl:h-[358px]"
         />
       )}
 
