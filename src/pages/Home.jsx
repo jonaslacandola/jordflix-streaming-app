@@ -8,7 +8,7 @@ function Home() {
       <div className="relative flex flex-col justify-center gap-2 pb-4 pt-10 text-center md:py-[5rem]">
         <div className="z-10 flex flex-col items-center justify-center">
           <Logo size="text-[3rem] md:text-[5rem]" />
-          <p className="text-center text-sm md:text-base">
+          <p className="w-[90%] text-center text-sm md:text-base">
             Watch free HD movies and tv series, anytime, anywhere.
           </p>
         </div>
