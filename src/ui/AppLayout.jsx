@@ -9,7 +9,7 @@ function AppLayout() {
       <div className="w-100 grid h-screen grid-rows-[auto_1fr] gap-4 bg-gradient-to-t from-slate-950 to-slate-900 p-4 text-slate-50">
         <Header />
         <Sidebar />
-        <main className="mx-auto w-[90%] overflow-y-scroll">
+        <main className="mx-auto overflow-y-scroll md:w-[90%]">
           <Outlet />
         </main>
       </div>

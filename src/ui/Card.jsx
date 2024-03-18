@@ -24,20 +24,20 @@ function Card({ movieTv }) {
         <img
           src={`https://image.tmdb.org/t/p/w500${poster_path}`}
           alt={movieTv.title}
-          className="h-[321px] w-[250px] rounded-md xl:h-[358px]"
+          className="h-[300px] w-[250px] rounded-md md:h-[321px] xl:h-[358px]"
         />
       ) : (
         <img
           src="../../EmptyPoster.png"
           alt={movieTv.title}
-          className="h-[321px] w-[250px] rounded-md xl:h-[358px]"
+          className="h-[300px] w-[250px] rounded-md md:h-[321px] xl:h-[358px]"
         />
       )}
 
       <div className="flex flex-col gap-[4px]">
-        <p className="truncate text-slate-50">{title}</p>
+        <p className="truncate text-sm text-slate-50 md:text-base">{title}</p>
 
-        <div className="flex items-center justify-between text-sm text-blue-600">
+        <div className="flex items-center justify-between text-[0.84rem] text-blue-600 md:text-sm">
           <div className="flex gap-2">
             <span>{release_year}</span>
             {media_type && (
