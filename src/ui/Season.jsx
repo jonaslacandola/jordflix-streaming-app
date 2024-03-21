@@ -23,7 +23,7 @@ function Season({ season }) {
       </div>
 
       {isOpen && (
-        <div className="flex flex-row flex-wrap gap-2 p-2">
+        <div className="flex flex-wrap gap-1 py-1">
           {[...Array(episode_count)].map((el, index) => (
             <Episode key={index} episode={index + 1} season={season_number} />
           ))}

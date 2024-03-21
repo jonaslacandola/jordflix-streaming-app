@@ -33,7 +33,7 @@ function MovieDetail() {
         allowFullScreen
       ></iframe>
 
-      <div className="my-8 flex gap-6 md:my-10">
+      <div className="my-8 flex flex-col gap-6 md:my-10 md:flex-row">
         <img
           src={`https://image.tmdb.org/t/p/w500${poster_path}`}
           alt={title}

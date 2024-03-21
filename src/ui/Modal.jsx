@@ -67,7 +67,7 @@ function Window({ children, name }) {
       >
         <div
           ref={windowRef}
-          className="absolute left-[-18rem] h-full w-[15%] border-r-2 border-slate-700 bg-slate-950 text-slate-50 transition-all duration-300"
+          className="absolute left-[-18rem] h-full border-r-2 border-slate-700 bg-slate-950 text-slate-50 transition-all duration-300 md:w-[15%]"
         >
           {children}
         </div>

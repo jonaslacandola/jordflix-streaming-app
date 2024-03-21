@@ -18,7 +18,7 @@ function Searchbar() {
     <input
       type="text"
       placeholder="Search movies or tv series"
-      className="w-[20%] rounded-md bg-slate-50 px-4 py-2 text-slate-900"
+      className="w-2/4 rounded-md bg-slate-50 px-3 py-1 text-sm text-slate-900 md:w-[20%] md:px-4 md:py-2 md:text-base"
       value={query}
       onInput={(event) => setQuery(event.target.value)}
       onKeyDownCapture={handleSearch}

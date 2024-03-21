@@ -32,7 +32,7 @@ function TvDetail() {
     <>
       {watchEpisode && (
         <>
-          <h1 className="mb-4 text-center text-xl font-medium text-blue-600 underline underline-offset-4">
+          <h1 className="mb-4 text-center text-base font-medium text-blue-600 underline underline-offset-4 md:text-xl">
             Now watching, {name}
           </h1>
           <iframe
@@ -49,13 +49,13 @@ function TvDetail() {
           <img
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
             alt={name}
-            className="w-[250px] rounded-md"
+            className="hidden w-[250px] rounded-md md:block"
           />
           <div className="flex flex-col gap-4">
-            <h1 className="text-4xl">{name}</h1>
-            <p className="text-slate-200">{overview}</p>
+            <h1 className="text-2xl md:text-4xl">{name}</h1>
+            <p className="text-sm text-slate-200 md:text-base">{overview}</p>
 
-            <div className="flex gap-2 text-slate-300">
+            <div className="flex gap-2 text-sm text-slate-300 md:text-base">
               <span>{status}</span>
               <span>&bull;</span>
               <span>{first_air_date}</span>
@@ -63,18 +63,18 @@ function TvDetail() {
               <span>{number_of_episodes} Episodes</span>
             </div>
 
-            <span className="flex gap-2 text-slate-300">
+            <span className="flex gap-2 text-sm text-slate-300 md:text-base">
               {production_countries.map((country) => country.name).join(", ")}
             </span>
 
-            <span className="flex gap-2 text-slate-300">
+            <span className="flex gap-2 text-sm text-slate-300 md:text-base">
               {production_companies.map((company) => company.name).join(", ")}
             </span>
 
             <div className="flex gap-2">
               {genres.map((genre) => (
                 <span
-                  className="rounded-full bg-blue-900 bg-opacity-30 px-[10px] py-[4px] text-sm text-blue-600"
+                  className="rounded-full bg-blue-900 bg-opacity-30 px-[10px] py-[4px] text-[0.81rem] text-blue-600 md:text-sm"
                   key={genre.id}
                 >
                   {genre.name}
