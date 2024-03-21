@@ -18,6 +18,7 @@ function Home() {
           alt="background-movies"
         />
       </div>
+
       <TrendingMovies />
       <TrendingTv />
     </div>

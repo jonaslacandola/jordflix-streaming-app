@@ -26,6 +26,7 @@ function Movies() {
         data={movies}
         render={(movie) => <Card key={movie.id} movieTv={movie} />}
       />
+
       <Paginator maxPage={maxPage} />
     </div>
   );

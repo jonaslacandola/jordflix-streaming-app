@@ -1,12 +1,8 @@
 import PaginationButton from "./PaginationButton";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
 
 function Paginator({ maxPage }) {
-  const [searchParams] = useSearchParams();
-  const currPage = searchParams.get("page");
-
   const [page, setPage] = useState(1);
   const paginators = Array.from(
     { length: page + 5 - page },

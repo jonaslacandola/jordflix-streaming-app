@@ -4,7 +4,7 @@ import Modal from "./Modal";
 function Hamburger() {
   return (
     <Modal.Open opens="sidebar">
-      <button className="text-3xl">
+      <button className="text-2xl md:text-3xl">
         <HiBars3 />
       </button>
     </Modal.Open>

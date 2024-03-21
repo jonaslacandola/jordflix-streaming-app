@@ -11,7 +11,7 @@ function PaginationButton({ page }) {
 
   return (
     <button
-      className={`border-2 border-blue-600 px-4 py-2 transition-colors duration-300 hover:bg-blue-600 ${currPage == page && "bg-blue-600"}`}
+      className={`border-2 border-blue-600 px-4 py-2 text-[10px] transition-colors duration-300 hover:bg-blue-600 md:text-sm ${currPage == page && "bg-blue-600"}`}
       onClick={handleSelectPage}
     >
       {page}
