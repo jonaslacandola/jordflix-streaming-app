@@ -2,10 +2,16 @@ import { useParams } from "react-router-dom";
 import { useMovie } from "../features/movies/useMovie";
 
 import Spinner from "../ui/Spinner";
+import { useState } from "react";
 
 function MovieDetail() {
+  const [server, setServer] = useState("xyz");
   const { movieId } = useParams();
   const { data, isLoading } = useMovie(movieId);
+
+  function handleChangeServer(to) {
+    setServer(to);
+  }
 
   if (isLoading) return <Spinner />;
 
@@ -28,10 +34,24 @@ function MovieDetail() {
         Now watching, {title}
       </h1>
       <iframe
-        src={`https://vidsrc.to/embed/movie/${imdb_id}`}
+        src={`https://vidsrc.${server}/embed/movie/${imdb_id}`}
         className="m-auto h-[30%] w-full rounded-md md:h-[50%] lg:h-[70%] xl:h-[90%]"
         allowFullScreen
       ></iframe>
+      <div className="mt-4 flex justify-center gap-2">
+        <button
+          className={`border-2 border-blue-600 px-3 py-2 transition-colors duration-300 hover:bg-blue-600 ${server === "xyz" && "bg-blue-600"}`}
+          onClick={() => handleChangeServer("xyz")}
+        >
+          Server 1
+        </button>
+        <button
+          className={`border-2 border-blue-600 px-3 py-2 transition-colors duration-300 hover:bg-blue-600 ${server === "to" && "bg-blue-600"}`}
+          onClick={() => handleChangeServer("to")}
+        >
+          Server 2
+        </button>
+      </div>
 
       <div className="my-8 flex flex-col gap-6 md:my-10 md:flex-row">
         <img

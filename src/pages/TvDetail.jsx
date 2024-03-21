@@ -3,14 +3,20 @@ import { useTv } from "../features/tv/useTv";
 
 import Spinner from "../ui/Spinner";
 import Season from "../ui/Season";
+import { useState } from "react";
 
 function TvDetail() {
+  const [server, setServer] = useState("xyz");
   const { tvId } = useParams();
   const [searchParams] = useSearchParams();
   const { data, isLoading } = useTv(tvId);
 
   const watchSeason = searchParams.getAll("season").at(0);
   const watchEpisode = searchParams.getAll("episode").at(0);
+
+  function handleChangeServer(to) {
+    setServer(to);
+  }
 
   if (isLoading) return <Spinner />;
 
@@ -36,11 +42,25 @@ function TvDetail() {
             Now watching, {name}
           </h1>
           <iframe
-            src={`https://vidsrc.to/embed/tv/${id}/${watchSeason}/${watchEpisode}`}
+            src={`https://vidsrc.${server}/embed/tv/${id}/${watchSeason}/${watchEpisode}`}
             className="m-auto h-[30%] w-full rounded-md md:h-[50%] lg:h-[70%] xl:h-[90%]"
             referrerPolicy="origin"
             allowFullScreen
           ></iframe>
+          <div className="mt-4 flex justify-center gap-2">
+            <button
+              className={`border-2 border-blue-600 px-3 py-2 transition-colors duration-300 hover:bg-blue-600 ${server === "xyz" && "bg-blue-600"}`}
+              onClick={() => handleChangeServer("xyz")}
+            >
+              Server 1
+            </button>
+            <button
+              className={`border-2 border-blue-600 px-3 py-2 transition-colors duration-300 hover:bg-blue-600 ${server === "to" && "bg-blue-600"}`}
+              onClick={() => handleChangeServer("to")}
+            >
+              Server 2
+            </button>
+          </div>
         </>
       )}
 
