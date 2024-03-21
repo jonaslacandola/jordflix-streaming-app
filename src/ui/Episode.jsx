@@ -2,8 +2,8 @@ import { useSearchParams } from "react-router-dom";
 
 function Episode({ episode, season }) {
   const [searchParams, setSearchParams] = useSearchParams();
-  const currEp = Number(searchParams.get("episode")) || 1;
-  const currSs = Number(searchParams.get("season")) || 1;
+  const currEp = Number(searchParams.get("episode"));
+  const currSs = Number(searchParams.get("season"));
   const isActive = currEp === episode && currSs === season;
 
   function handleWatch() {
