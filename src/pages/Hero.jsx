@@ -4,7 +4,7 @@ import Logo from "../ui/Logo";
 function Hero() {
   return (
     <div className="h-screen w-full bg-gradient-to-t from-slate-950 to-slate-900 text-slate-50">
-      <div className="m-auto flex h-full w-[80%] flex-col items-center justify-center gap-4 text-center">
+      <div className="m-auto flex h-full w-[80%] flex-col items-center justify-center gap-2 text-center">
         <Logo size="text-[5rem] md:text-[8rem]" />
         <p className="txt-lg mb-12 md:text-xl">
           Watch free HD movies and tv series, anytime, anywhere.
