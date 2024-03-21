@@ -36,7 +36,7 @@ function TvDetail() {
             Now watching, {name}
           </h1>
           <iframe
-            src={`https://vidsrc.xyz/embed/tv?tmdb=${id}&season=${watchSeason}&episode=${watchEpisode}`}
+            src={`https://vidsrc.to/embed/tv/${id}/${watchSeason}/${watchEpisode}`}
             className="m-auto h-[30%] w-full rounded-md md:h-[50%] lg:h-[70%] xl:h-[90%]"
             referrerPolicy="origin"
             allowFullScreen

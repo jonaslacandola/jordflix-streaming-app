@@ -28,7 +28,7 @@ function MovieDetail() {
         Now watching, {title}
       </h1>
       <iframe
-        src={`https://vidsrc.xyz/embed/movie?imdb=${imdb_id}`}
+        src={`https://vidsrc.to/embed/movie/${imdb_id}`}
         className="m-auto h-[30%] w-full rounded-md md:h-[50%] lg:h-[70%] xl:h-[90%]"
         allowFullScreen
       ></iframe>
