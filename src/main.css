@@ -27,6 +27,6 @@ a.active {
   @apply text-blue-600 transition-colors duration-300;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
