@@ -32,7 +32,10 @@ function TvDetail() {
     overview,
     genres,
     seasons,
+    last_episode_to_air,
   } = data;
+  const last_episode = last_episode_to_air.episode_number;
+  const last_season = last_episode_to_air.season_number;
 
   return (
     <>
@@ -106,7 +109,11 @@ function TvDetail() {
 
         <div className="flex flex-col gap-2">
           {seasons.map((season, index) => (
-            <Season key={index} season={season} />
+            <Season
+              key={index}
+              season={season}
+              maxEpisode={{ onSeason: last_season, currEpisode: last_episode }}
+            />
           ))}
         </div>
       </div>
